@@ -1,0 +1,209 @@
+slow ledge get up
+hard backward knockback
+backward air knockback
+death on back
+backflip
+climbing pole
+short pole grab
+long pole grab (1/2)
+long pole grab (2/2)
+handstand
+handstand jump
+start handstand
+stop handstand
+holding pole
+standing motionless
+skidding
+stop skidding
+fast long jump landing
+slow long jump landing
+fast long jump
+slow long jump
+cannon shot / vertical wind
+decelerating [with an object]
+walking [with an object]
+slow walking [with an object]
+start shivering
+stop shivering
+shivering
+climb down onto ledge
+waving
+Peach cutscene - holding hat
+Peach cutscene - looking forward
+Peach cutscene - looking around
+Peach cutscene - looking up
+Peach cutscene - taking off hat
+Peach cutscene - walking to castle
+Peach cutscene - running to castle
+grand star cutscene - twirling
+grand star cutscene - jumping
+Peach cutscene - victory sign dance
+lava boost landing
+lava/fire boost
+flying
+riding owl
+hard forward knockback
+thrown / forward air knockback
+death on stomach
+suffocation
+coughing
+key exit
+standing death
+ledge grab
+quick ledge get up
+start hanging
+putting on hat
+star exit with hat
+~putting on hat fast
+head stuck in ground
+ground pound landing
+start ground pound from flying
+start ground pound from freefall
+ground pound
+butt stuck in ground
+standing [with an object]
+jump landing [with an object]
+jump [with an object]
+freefall landing [with an object]
+freefall [with an object]
+sitting to freefall [with an object]
+air/ground sitting [with an object]
+stop sitting [with an object]
+shell riding on ground
+walking
+~forward flip
+shell riding in air
+double jump landing
+double jump (2/2)
+standard jump
+standard jump landing
+air kick
+double jump (1/2)
+~start forward spinning
+air throw
+slide kick freefall
+~bend knees while riding shell
+feet stuck in ground
+freefall
+freefall landing
+start being grabbed/heaved
+picking up a heavy object
+stop sliding/diving
+start flying from cannon shot
+swinging - right arm
+swinging - left arm
+star exit without hat
+pulling door
+pushing door
+unlocking key door
+~start crying
+~crying
+~stop crying
+ground throw
+ground kick
+first punch (1/2)
+second punch (1/2)
+first punch (2/2)
+second punch (2/2)
+picking up an object
+pushing
+start riding shell
+placing down an object
+forward spinning
+backward spinning
+breakdance
+running
+~running 2
+soft backward knockback
+soft forward knockback
+quicksand dying breath
+in quicksand
+wading through quicksand
+electrocution
+shocked
+medium backward knockback
+medium forward knockback
+standing [with a heavy object]
+standing against wall
+sidestepping left
+sidestepping right
+start sleeping - standing
+start sleeping - scratching
+start sleeping - yawning
+start sleeping - sitting
+sleeping - sitting
+sleeping - start lying down
+sleeping - lying down
+air/ground dive
+sliding
+ground bonk
+stop sliding [with an object]
+slide kick
+stop slide kicking
+~sitting motionless
+stop sitting
+sitting to freefall
+air/ground sitting
+tiptoeing
+twirl landing
+twirling
+start twirling
+stop crouching
+start crouching
+crouching
+crawling
+stop crawling
+start crawling
+unlocking door (1/2)
+unlocking door (2/2)
+water backward knockback
+swim [with an object] (1/2)
+swim [with an object] (2/2)
+flutterkick [with an object]
+water action end [with an object]
+water grabbing end [with an object]
+in water [with an object]
+drowning - holding mouth
+drowning - falling forward
+water death
+water forward knockback
+water to freefall
+swim (1/2)
+swim (2/2)
+flutterkick
+water action end
+picking up an object in water
+water grab (2/2)
+water grab (1/2)
+water throw
+in water
+star dance in water
+stop star dance in water
+picking up Bowser
+swinging Bowser
+releasing Bowser
+holding Bowser
+heavy throw
+panting
+walking [with a heavy object]
+turning around (1/2)
+turning around (2/2)
+sideflip landing
+sideflip
+landing celebration
+triple jump
+first person view
+standing - turning head left
+standing - turning head right
+standing - turning head to center
+hanging - left arm
+hanging - right arm
+waking up from sitting
+waking up from lying
+pre-tiptoeing
+pole jump / wall kick
+pre-wallkick
+star dance on ground
+stop star dance on ground
+forward spinning to horizontal
+flying triple jump

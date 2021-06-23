@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; background: black; }
+			body, head, html { height: 100% }
+			a:link { color: black; text-decoration: none; }
+		</style>
+	</head>
+	<body>
+		<script src="https://threejs.org/build/three.js"></script>
+		<script src='parser.js'></script>
+		<script src='example.js'></script>
+		<script src='OrbitControls.js'></script>
+		<script id='list' src='list.txt' type='text/plain'></script>
+		
+		<div style='display: flex; width: 100%; height: 100%'>
+			<div id='rendererDiv' style='flex: 1; height: 100%;'></div>
+			<div id='listDiv' style='flex: 0.5; background: gray; height: 100%; overflow: scroll; font-size: 12px; font-family:"Lucida Console", monospace'></div>
+		</div>
+		
+		<script>
+			
+			const renderer = new THREE.WebGLRenderer();
+			let computed = getComputedStyle(rendererDiv);
+			let width = parseInt(computed.width);
+			let height = parseInt(computed.height);
+			renderer.setSize( width, height );
+			rendererDiv.appendChild( renderer.domElement );
+			
+			const scene = new THREE.Scene();
+			const camera = new THREE.PerspectiveCamera( 75, width / height, 0.1, 1000 );
+			
+			const light = new THREE.PointLight( 0xffffff, 1, 100 );
+			light.position.y -= 2;
+			light.position.x -= 2;
+			light.position.z -= 2;
+			scene.add(light);
+			
+			const light2 = new THREE.HemisphereLight( 0xffffbb, 0x080820, 1 );
+			light2.position.y -= 1;
+			scene.add(light2);
+			camera.position.z = 5;
+			
+			group = new THREE.Group();
+			scene.add(group);
+			
+			let head = new THREE.Mesh(new THREE.BoxGeometry(), new THREE.MeshPhongMaterial({color: 0x00ff00})); group.add(head);
+			head.geometry.translate(0,1,0);
+			leftArm1 = new THREE.Mesh(new THREE.BoxGeometry(), new THREE.MeshPhongMaterial({color: 0xff0000})); group.add(leftArm1);
+			leftArm1.geometry.translate(0,0,-0.5);
+			leftArm1.geometry.scale(0.5,0.5,1);
+			//leftArm1.position.y -= 0.75;
+			leftArm1.position.z -= 0.75;
+			
+			let leftArm2 = new THREE.Mesh(new THREE.BoxGeometry(), new THREE.MeshPhongMaterial({color: 0x0000ff})); leftArm1.add(leftArm2);
+			leftArm2.geometry.translate(0,0,-0.5);
+			leftArm2.position.z -= 1;
+			leftArm2.geometry.scale(0.5,0.5,1);
+			
+			
+
+			
+			orbit = new THREE.OrbitControls(camera, renderer.domElement);
+			orbit.target = new THREE.Vector3(0,0,0); // set the center
+			orbit.maxPolarAngle =  Math.PI/2; // prevent the camera from going under the ground
+			orbit.minDistance = 1; // the minimum distance the camera must have from center
+			orbit.maxDistance = 250; // the maximum distance the camera must have from center
+			orbit.zoomSpeed = 0.3; // control the zoomIn and zoomOut speed
+			orbit.rotateSpeed = 0.5; // control the rotate speed
+
+			const animate = function () {
+				//requestAnimationFrame( animate );
+				setTimeout(animate,1000/30);
+				
+				
+				if (actor.animation)  {
+					actor.advanceFrame();
+					part = actor.parts[1];
+					
+					group.rotation.x = part.yaw.value;
+					group.rotation.y = part.pitch.value;
+					group.rotation.z = part.roll.value;
+					
+					leftArm1Part = actor.parts[5];
+					leftArm2Part = actor.parts[6];
+					
+					leftArm1.rotation.x = leftArm1Part.yaw.value;
+					leftArm1.rotation.y = leftArm1Part.pitch.value;
+					leftArm1.rotation.z = leftArm1Part.roll.value;
+					
+					leftArm2.rotation.x = leftArm2Part.yaw.value;
+					leftArm2.rotation.y = leftArm2Part.pitch.value;
+					leftArm2.rotation.z = leftArm2Part.roll.value;
+				}
+				//cube.rotation.x += 0.01;
+				//cube.rotation.y += 0.01;
+
+				renderer.render( scene, camera );
+			};
+
+			loadAnimation(12, anim => {
+				actor = new Actor(20);
+				//actor.setAnimation(anim);
+				animate();
+			});
+			
+			loadFile('list.txt', list => {
+				arr = list.split(/(\r\n|\r|\n)/g);
+				for (let i = 0; i < arr.length; i+=2) {
+					let link = document.createElement('a');
+					link.innerHTML = ' ' + (i/2) + '  ' + arr[i];
+					link.style.whiteSpace = 'pre-wrap';
+					link.setAttribute('href', '#' + i/2);
+					listDiv.appendChild(link);
+					listDiv.appendChild(document.createElement('br'));
+					link.animIndex = i/2;
+					link.onclick = () => {
+						loadAnimation(link.animIndex, anim => {
+							actor.setAnimation(anim);
+						});
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
